@@ -1,0 +1,5 @@
+# Dependencies, build output and local files
+node_modules/
+.env
+tmp/
+.DS_Store
