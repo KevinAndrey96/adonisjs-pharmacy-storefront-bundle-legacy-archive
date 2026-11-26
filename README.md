@@ -1,27 +1,49 @@
-# Pharmacy Storefront Bundle (Legacy Archive)
+# Hiperpharma: tienda y panel AdonisJS con maquetas HTML (archivo histórico)
 
-[![Unified Monorepo](https://img.shields.io/badge/Unified%20Monorepo-pharmacy-ecommerce-platform-blue.svg)](https://github.com/KevinAndrey96/pharmacy-ecommerce-platform)
-[![Status: Historical Archive](https://img.shields.io/badge/Status-Historical%20Archive-lightgrey.svg)](https://github.com/KevinAndrey96/pharmacy-ecommerce-platform)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/KevinAndrey96/pharmacy-ecommerce-platform/blob/master/LICENSE)
+![Estado: archivo histórico](https://img.shields.io/badge/Estado-archivo%20hist%C3%B3rico-lightgrey) ![AdonisJS 4.1](https://img.shields.io/badge/AdonisJS%204.1-5A45FF) ![HTML5 | Sass](https://img.shields.io/badge/HTML5%20%7C%20Sass-E34F26) ![MySQL](https://img.shields.io/badge/MySQL-4479A1)
 
-> [!IMPORTANT]
-> **This repository is preserved as a historical component archive.**
-> Development, maintenance, and full-stack containerization have been unified into the flagship production monorepo:
->
-> 🚀 **[KevinAndrey96/pharmacy-ecommerce-platform](https://github.com/KevinAndrey96/pharmacy-ecommerce-platform)**
->
-> Please refer to the main repository for the complete architecture, Docker Compose orchestration, automated test suites, and active documentation.
+> [!NOTE]
+> Paquete con la tienda en línea, el panel administrativo y las maquetas HTML de Hiperpharma (2020). El producto continúa en **[pharmacy-ecommerce-platform](https://github.com/KevinAndrey96/pharmacy-ecommerce-platform)**, que reúne todos sus componentes con documentación actualizada.
 
----
+## Qué contiene
 
-## 📌 Historical Overview
+- `Store/`: tienda en AdonisJS con inicio, categorías, listado y detalle de productos, carrito, checkout y pedido completado.
+- `Admin/`: versión del panel administrativo incluida en el paquete de entrega.
+- `HIPERPHARMA TIENDA/`: maqueta HTML y Sass de la tienda antes de integrarla con Edge.
+- `HIPERPHARMA ADMIN/`: maqueta HTML del panel con su configuración de Grunt y Bower.
 
-This repository preserves the historical customer-facing storefront and asset bundle originally developed for the Pharmacy E-Commerce Platform. It contained product showcase templates, search filters, and checkout workflows.
+## Stack original
 
-All components, database schemas, and workflows have been merged and modernized into the primary repository: **[pharmacy-ecommerce-platform](https://github.com/KevinAndrey96/pharmacy-ecommerce-platform)**.
+| Componente | Tecnología |
+| :--- | :--- |
+| Framework | AdonisJS 4.1 con vistas Edge |
+| Maquetas | HTML5, Sass, Bootstrap y Grunt |
+| Base de datos | MySQL |
 
----
+## Ejecutarlo localmente
 
-## 📄 License
+Cada aplicación AdonisJS (`Store/` y `Admin/`) se ejecuta por separado desde su carpeta:
 
-This historical archive is part of the project licensed under the MIT License. See the main repository for details.
+```bash
+cd Store
+cp .env.example .env    # si no existe, crea uno con APP_KEY y DB_*
+npm install
+npx adonis key:generate
+npm start
+```
+
+Las maquetas HTML se abren directamente en el navegador. Requiere Node.js 14; AdonisJS 4.1 ya no recibe soporte.
+
+## Estado del repositorio
+
+- Se conserva sin cambios funcionales como referencia del código original (2020).
+- No recibe actualizaciones de dependencias; el mantenimiento ocurre en [pharmacy-ecommerce-platform](https://github.com/KevinAndrey96/pharmacy-ecommerce-platform).
+- En noviembre de 2026 se depuró el historial completo: se retiraron los binarios `nuget.exe` de librerías de terceros y un manual de comercio de una pasarela de pagos, que no era código del proyecto. Todos los commits conservan su fecha original.
+
+## Autoría
+
+Kevin Andrey Herrera Silva ([@KevinAndrey96](https://github.com/KevinAndrey96)).
+
+## Licencia
+
+Código desarrollado para un cliente y publicado como muestra de portafolio. No incluye licencia de código abierto: todos los derechos reservados.
